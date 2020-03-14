@@ -60,5 +60,5 @@ body {
 .banner-caption {
     font-family: 'Cormorant Unicase', serif;
     font-weight: 900;
-    font-size: 3rem;
+    text-shadow: 2px 2px #E95420;
 }
