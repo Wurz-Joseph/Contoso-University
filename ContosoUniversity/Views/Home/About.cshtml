@@ -3,28 +3,33 @@
 @{
     ViewData["Title"] = "Student Body Statistics";
 }
+    <div class="container mt-5">
+        <h2>Student Body Statistics</h2>
 
-<h2>Student Body Statistics</h2>
+        <table>
+            <tr>
+                <th>
+                    Enrollment Date
+                </th>
+                <th>
+                    Students
+                </th>
+            </tr>
 
-<table>
-    <tr>
-        <th>
-            Enrollment Date
-        </th>
-        <th>
-            Students
-        </th>
-    </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.EnrollmentDate)
+                    </td>
+                    <td>
+                        @item.StudentCount
+                    </td>
+                </tr>
+            }
+        </table>
 
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.EnrollmentDate)
-            </td>
-            <td>
-                @item.StudentCount
-            </td>
-        </tr>
-    }
-</table>
+        <div class="mt-5">
+            Contact Info - josephwurz@byui.edu
+        </div>
+    </div>
